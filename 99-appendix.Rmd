@@ -1,0 +1,21 @@
+# (APPENDIX) APPENDIX {-}
+
+# Workflow Templates 1
+
+
+
+# Snakemake Workflow Templates 2
+
+
+
+# Snakemake Workflow Templates 3
+
+
+
+# Snakemake Workflow Templates 4
+
+
+
+# Snakemake Workflow Templates 5
+
+

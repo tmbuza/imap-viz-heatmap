@@ -1,0 +1,10 @@
+# (PART) VARIANT ANALYSIS {-}
+
+# Variant calling 
+
+<!-- ![](dags/varcall_rulegraph.svg) -->
+<center>
+<img src="dags/varcall_rulegraph.svg" alt="Cover Image" width="100%" style="padding: 50px 0px 50px 0px; float: right;"/>
+</center>
+
+## Getting started with variant calling 

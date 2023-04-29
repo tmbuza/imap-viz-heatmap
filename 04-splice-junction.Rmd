@@ -1,0 +1,46 @@
+# (PART) SPLICE JUNCTIONS {-}
+
+# Junction Analysis Using Portcullis Docker Image
+> Docker reference: https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
+## Step 1: Pull or build image from a `Dockerfile`
+```{bash}
+docker pull maplesond/portcullis:latest
+```
+
+## Step 2: Run and mount a volume
+- Run the pulled image by mounting it to e.g \data. 
+- Then try to ls to see if you can see the files in the mounted directory
+```{bash
+docker run -t -i -v $(pwd):/data maplesond/portcullis:latest
+```
+> Output is a Linux CLI: `/data # `
+
+## Step 3: Run all Portcullis Steps at Once
+- Using the `full` subtool
+
+```{bash
+for i in data/*.bam; do portcullis full -t 4 -o ${i}.out data/C_auris_B8441_current_chromosomes.fasta $i; done
+```
+
+> Make sure we have a sufficent number of junctions to work with.  Minimum 1000
+
+> Not enough junctions to create training set.
+
+# Step 4: Junctions Annotation 
+- Using Redtools
+
+## Prepare a bed file
+- Use `regtools junctions extract [options] indexed_alignments.bam`
+```{bash
+regtools junctions annotate -S -o redtools_out/annotated.junctions.tab portcullis_out/3-filt/portcullis_filtered.pass.junctions.bed data/C_auris_B8441_current_chromosomes.fasta data/C_auris_B8441_current_features.gtf
+
+```
+
+```{bash
+for i in data/*.bam; do portcullis full -t 4 -o ${i}.out data/C_auris_B8441_current_chromosomes.fasta $i; done
+```
+
+```{bash
+for i in data/*.out; do regtools junctions annotate -S -o ${i}.annotated.junctions.tab $i/3-filt/portcullis_filtered.pass.junctions.bed data/C_auris_B8441_current_chromosomes.fasta data/C_auris_B8441_current_features.gtf; done
+```

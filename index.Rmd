@@ -1,0 +1,44 @@
+---
+title: "Multi-Omics Project Workflows"
+subtitle: ""
+author: "Teresia Mrema-Buza, A Bioinformatics and Data Science Enthusiast"
+date: "Updated on `r Sys.Date()`"
+site: bookdown::bookdown_site
+knit: bookdown::render_book
+output:
+  bookdown::bs4_book:
+    includes:
+      in_header:
+    template: bs4_template.html
+documentclass: book
+classoption: openany #remove empty pages in pdf doc
+bibliography:
+- library/bibliography.bib
+citation_package:
+- natbib
+colorlinks: true
+css:
+  - style.css
+always_allow_html: true
+fig_caption: true
+fontsize: 12pt
+geometry: margin=1in
+indent: false
+keep_tex: true
+link-citations: true
+mainfont: Times New Roman
+biblio-style: apalike
+description: |
+  This guide provides integrated and highly curated solutions for achieving better results.
+---
+
+# Quick Glimpse {-#glimpse}
+
+...Placeholder for cover image...
+<center>
+<img src="img/cicd.png" alt="Cover Image" width="100%" style="padding: 50px 0px 50px 0px; float: right;"/>
+</center>
+
+
+## Structure of this guide {-}
+This guide is divided into chapters to facilitate easy navigation. Each chapter is displayed on the left navigation bars. Sections for each chapter are displayed on the right navigation bars. Click the hyper-linked text to jump into a specific chapter or section.

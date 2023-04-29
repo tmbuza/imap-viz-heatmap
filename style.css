@@ -1,0 +1,173 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+.book-extra #book-repo, #book-source, #book-edit {
+  display: none;
+}
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+/* User Added styles */
+#book-repo, #book-source, #book-edit {
+  display: none;
+  border-bottom: 1px;
+}
+
+.author, .title {
+  display: none;
+}
+.main-container {
+  max-width: 100%;
+}
+
+body {
+  background-color: black;
+  color: #f5f5f5;
+  font-size: 1.0vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 1.0vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/*Font awesome*/
+
+.tmbcomment, .tmbalert, .tmbinfo, .tmbqns, .tmbcheck1, .tmbcheck2, .tmbshare, .tmbarrowF, .tmb2arrowsF {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #f5f5f5;
+  position:relative;
+}
+
+.tmbcomment:before {
+    content: "\f14d";
+  font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbalert:before {
+    content: "\f06a";
+  font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbinfo:before {
+    content: "\f05a";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbinfo2:before {
+    content: "\10f129";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbarrowF:before {
+    content: "\f0a9";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmb2arrowsF:before {
+    content: "\f101";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbshare:before {
+    content: "\f064";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 35px;
+ }
+
+.tmbqns:before {
+    content: "\f059";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbcheck1:before {
+    content: "\f14a";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbcheck2:before {
+    content: "\f058";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+input[type=message], input[type=email], input[type=text], textarea {
+  width: 100%;
+  padding: 0, 120px 0, 0;
+  border: 1px solid ;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+button[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover{
+  background-color: #45ao49;
+}

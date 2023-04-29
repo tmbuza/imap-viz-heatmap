@@ -1,0 +1,10 @@
+# (PART) MICROBIOME ANALYSIS {-}
+
+# OTU Profiling
+<!-- ![](dags/otu_workflow.png) -->
+<center>
+<img src="dags/otu_workflow.png" alt="Cover Image" width="100%" style="padding: 50px 0px 50px 0px; float: right;"/>
+</center>
+
+
+## Getting started with OTU profiling 
