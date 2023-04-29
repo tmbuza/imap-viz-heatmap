@@ -1,0 +1,38 @@
+name: Testing Bookdown Snakemake
+
+on:
+  push:
+    branches: [ "gh-pages" ]
+  # pull_request:
+  #   branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+#     - name: Snakemake workflow
+#       uses: snakemake/snakemake-github-action@v1
+#       with:
+#         directory: '.'
+#         snakefile: 'Snakefile'
+#         args: '--cores 1 --use-conda --conda-cleanup-pkgs cache'
+#         stagein: '' # additional preliminary commands to run (can be multiline)
+
+    - name: Configure git on runner
+      run: |
+        git config --local user.email "noreply@github.com"
+        git config --local user.name "GitHub"
+    - name: Commit changes to repository
+      run: |
+        git add _book/index.html visuals/nice-fig-1.png dags/rulegraph.svg dags/dag.svg
+    - run: echo "🍏 This job's status is ${{ job.status }}."
+

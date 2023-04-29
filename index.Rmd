@@ -1,0 +1,115 @@
+--- 
+title: "How To: Snakemake and Git Actions in Bookdown"
+subtitle: "Practical user guides with integrated solutions"
+author: "Teresia Mrema-Buza, A Bioinformatics and Data Science Enthusiast"
+date: "Updated on `r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::bs4_book:
+    template: bs4_template.html
+documentclass: book
+classoption: openany
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: true
+always_allow_html: true
+fig_caption: true
+fontsize: 12pt
+geometry: margin=1in
+indent: false
+keep_tex: true
+mainfont: Times New Roman
+github-repo: tmbuza/my-rmarkdown-snakemake
+email_address: tmbuza@complexdatainsights.com
+description: "The output format for this example is bookdown::gitbook."
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+
+# Getting Started with bs4 Bookdown Document
+
+This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+
+The **bookdown** package can be installed from CRAN or Github:
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+
+```{r include=FALSE}
+knitr::write_bib(
+  c(.packages(), 
+    'bookdown', 
+    'knitr', 
+    'rmarkdown'), 'packages.bib')
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = FALSE,
+  comment = NA,
+  fig.path='./visuals/',
+  fig.show='asis',
+  dev = 'png',
+  fig.align='center',
+  out.width = "70%",
+  fig.width = 7,
+  fig.asp = 0.7,
+  fig.show = "asis"
+)
+```
+
+
+```{css echo = FALSE}
+/* .author, .title {
+  display: none;
+}
+
+.main-container {
+  max-width: 100%;
+}
+
+body {
+  background-color: black;
+  color: #f5f5f5;
+  font-size: 1.0vw;
+  font-family: "Montserrat", sans-serif;
+} */
+```
+
+
+```{r child='01-intro.Rmd'}
+
+```
+
+
+```{r child='02-literature.Rmd'}
+
+```
+
+
+```{r child='03-method.Rmd'}
+
+```
+
+
+```{r child='04-application.Rmd'}
+
+```
+
+
+```{r child='05-summary.Rmd'}
+
+```
+
+
+```{r child='06-references.Rmd'}
+
+```
+
+Last updated on `r Sys.time()`  
+This code was compiled by [TMB](mailto:`r rmarkdown::metadata$email_address`), it is available [here](`r rmarkdown::metadata$github_repo`).  
+Reference: See the reference chapter for amazing tutorials that led to development of this practical guide.  
