@@ -1,21 +1,64 @@
 ---
-title: "Multi-Omics Bioinformatics <small>&</small> Data Science<br>"
-subtitle: "Fostering Continuous Improvement and Integration<br><br>"
-author: TMBuza
-date: |
-  | ![](../img/cicd.png)<br><br>
-  | Updated on `r Sys.Date()`<br><br>
-  | `r format(Sys.time(), '%d %B, %Y')`
+title:  "<big><u>IMAP-PART 05</u></big><br><br>Microbiome Data Visualization using Hetamap techniques <br><br>"
+subtitle: |
+  | ![](images/hetamap.png)<br>
+  | Fostering Reproducible Microbiome data visualization
+date:
+- IMAP-HEATMAPS<br>[Latest GitHub-Repo](https://github.com/tmbuza/imap-viz-heatmaps/)<br>
+- Maintained by Teresia Mrema-Buza<br><br>
+- <b>Updated on `r Sys.Date()`</b>
+author: Teresia Mrema-Buza
+output: 
+  html_document: 
+css:
+- styles.css
+csl: "library/apa.csl"
+bibliography:
+- library/references.bib
+- library/imap.bib
+link-citations: true
+mainfont:
+biblio-style: apalike
 email_address: "tmbuza@complexdatainsights.com"
-website: "https://complexdatainsights.com"
+github_repo: "https://github.com/tmbuza/imap-viz-heatmaps"
+description: |
+  | A practical guide for visualizing microbiome data using heatmaps.
 ---
 
-<br><br>
+
+
+<div id="main-container">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap" rel="stylesheet">
 
+```{r globalsetup, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+  echo  =FALSE,
+  message  =FALSE,
+  warning  =FALSE,
+  cache  =FALSE,
+  comment  =NA,
+  fig.path='./figures/',
+  fig.show='asis',
+  dev  ='png',
+  fig.align='center',
+  out.width  ="70%",
+  fig.width  =7,
+  fig.asp  =0.7,
+  fig.show  ="asis"
+)
+
+library(tidyverse, suppressPackageStartupMessages())
+library(schtools)
+```
+
+# Microbiome Data Visualization Using Heatmap
 
 ```{r echo = FALSE, message = FALSE}
 library(tidyverse)
@@ -163,201 +206,3 @@ a{
 }   
 ```
 
-<div id="glimpse">
-# Highly Reviewed and Tested Templates
-
-These templates cover the main analytics steps and allow continuous improvement and integration.
-
-<hr>
-</div>
-
-<div id="tablefield">
-
-## Multi-Omics Data Insights
-
-|Type of Analysis| Skills and Tools |
-|:-------------------------|:--------------------:
-| Gene expression analysis | RNA-seq, STAR, DESeq, Snakemake, R, Python <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#gene-expression-analysis) | 
-| Gene enrichment analysis | RNA-seq, STAR, DESeq, Snakemake, R, Python <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#gene-enrichment-analysis) | 
-| Variant calling analysis| BWA, Snakemake,  <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#variant-calling) |
-| Genome wide association study | kGWASflow,  <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#genome-wide-association-study) |
-| Single Cell Analysis | scRNASeq, Scanpy, Python, Jupyter Notebook <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#single-cell-analysis) |
-| Amplicon data analysis (16S)| Mothur, QIIME2, R, Python <br>[Workflow: In progress]() |
-| Metagenomics data analysis <br> Microbial and pathway profiling|Biobakery, R, Python <br>[Workflow: In progress]() |
-| Microbiome Machine learning models| MikropML, Caret, Snakemake, R, Python  <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#microbiome-machine-learning-models) |
-| Gene Ontology Enrichment| GO, Proteomics, Snakemake, R, Python  <br>[Workflow](https://tmbuza.github.io/bs4book-ci-cd/#gene-ontology-enrichment) |
-
-<br><br><br>
-
-## Machine learning models
-
-|Model| Tools |
-|:-------------------------|:--------------------:
-| Logistic Regression|MikropML, Caret, Snakemake, R, Python <br>[Workflow: In progress]() |
-| Rainfall forest|  Snakemake, R, Python <br>[Workflow: In progress]() |
-| Support vector machine|  Snakemake, R, Python <br>[Workflow: In progress]() |
-
-<br><br><br>
-
-## Quantitative Data Analysis
-
-|Analysis| Tools |
-|:-------------------------|:--------------------:
-| Precipitation & drought| Snakemake, R, Python <br>[Workflow: In progress]() |
-| Temperature anomalies| Snakemake, R, Python <br>[Workflow: In progress]() |
-| Time Series Analysis|  R, Python <br>[Workflow: In progress]() |
-
-# Goal: Sustainable Data Analysis
-- Reproducibility
-- Adaptability
-- Transparency
-
-Reference: https://f1000research.com/articles/10-33
-
-<!-- ![](../images/sustainable_data_analysis.png) -->
-<img src="../images/sustainable_data_analysis.png"/>
-Aspects to consider for sustainable data analysis.
-
-
-</div> <!-- end of tablefield -->
-
-
-# Example of Snakemake workflow syntax
-## A
-<!-- ![](../images/snakemake_syntax.png) -->
-<img src="../images/snakemake_syntax.png"/>
-
-## B
-<img src="../images/snakemake_rules.png"/>
-
-
-<br><br><hr>
-
-# Differentially Expressed Genes
-<!-- ![](../dags/star_deseq_rulegraph.svg) -->
-<img src="../dags/star_deseq_rulegraph.svg"/>
-
-<!-- ![](../images/star_final_out.png) -->
-<img src="../images/star_final_out.png"/>
-
-<br><br><br>
-
-# Gene Set GO-Based Enrichment
-<!-- ![](../visuals/gene_enrich_fig.svg) -->
-<img src="../visuals/gene_enrich_fig.svg"/>
-
-<br><br><br>
-
-# Gene user-Set Enrichment
-<!-- ![](../visuals/gene_enrich_fig1.svg) -->
-<img src="../visuals/gene_enrich_fig1.svg"/>
-
-<br><br><br>
-
-# Variant calling
-<!-- ![](../dags/varcall_rulegraph.svg) -->
-<img src="../dags/varcall_rulegraph.svg"/>
-
-<br><br>
-
-- [Lumpy vcf dataset](https://raw.githubusercontent.com/VCCRI/SVPV/master/example/lumpy.vcf)
-- [Delly vcf dataset](https://raw.githubusercontent.com/VCCRI/SVPV/master/example/delly.vcf)
-
-![](../images/lumpy_quals.svg)
-- [Delly vcf dataset](https://raw.githubusercontent.com/VCCRI/SVPV/master/example/delly.vcf)
-
-![](../images/varcall_quals.svg)
-
-<br><br>
-
-- Using small test dataset
-
-![](../images/quals.svg)
-
-<br><br><br>
-
-# Genome wide association study
-<!-- ![](../dags/gwas_rulegraph.svg) -->
-<img src="../dags/gwas_rulegraph.svg"/>
-
-<br><br><br>
-
-# Gene Ontology Enrichment
-
-<!-- ![](../images/gene_ontology.png) -->
-<img src="../images/gene_ontology.png"/>
-
-<br><br><br>
-
-# Single Cell Analysis
-
-<!-- ![](../visuals/scanpy_leiden.png) -->
-<img src="../visuals/scanpy_leiden.png"/>
-
-<br><br><br>
-
-# Number of genes
-
-<!-- ![](../visuals/gene_count.png) -->
-<img src="../visuals/gene_count.png"/>
-
-
-# Highly variable genes
-
-<!-- ![](../visuals/highly_variable_genespng.png) -->
-<img src="../visuals/highly_variable_genespng.png"/>
-
-
-
-# Principal Component analysis
-
-<!-- ![](../visuals/scanpy_pca.png) -->
-<img src="../visuals/scanpy_pca.png"/>
-
-
-# Biomarker Discovery
-
-<!-- ![](../visuals/biomarker.png) -->
-<img src="../visuals/biomarker.png"/>
-
-<br><br><br>
-
-# Microbial profiling
-
-<!-- ![](../dags/otu_workflow.png) -->
-<img src="../dags/otu_workflow.png"/>
-
-<br><br><br>
-
-# Machine learning models
-<!-- ![](../dags/mikropml_rulegraph.svg) -->
-<img src="../dags/mikropml_rulegraph.svg"/>
-
-<br><br><br>
-
-# Quantitative data analysis
-<!-- ![](../dags/drought_analysis_dag.svg) -->
-<img src="../dags/drought_analysis_dag.svg"/>
-
-Daily global drought index (Standardized z-scores for ~50years).
-
-<br><br>
-<img src="../visuals/world_drought.svg"/>
-<br><br>
-<img src="../visuals/global_temp_anomaly.png"/>
-
-Temperature anomalies from 1880 (inner layer) to present (2022, outer layer).
-
-
-# Helpfull Ideas
-![](images/snakemake_idea.png)
-
-
-
-<br><br><hr>
-
-<div id="footer">
-Last updated on `r Sys.time()`  
-Workflows compiled by [TMBuza](mailto:`r rmarkdown::metadata$email_address`).   
-For more details, visit the [CDI website](`r rmarkdown::metadata$website`) (...in progress).
-</div>
